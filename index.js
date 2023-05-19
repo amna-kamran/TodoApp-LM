@@ -23,6 +23,10 @@ function addTask() {
 //we do this by first adding the event listener to the list-container which is the id name
 //of the ul tag inside which we keep all the tasks
 function del(e) {
+  //this function first checks if the clicked tag is a list tag or a span tah
+  //if its a list one, it toggles the li tag's class name to checked
+  //if its a span then it removes the parent element of the span which is
+  //the list
   if (e.target.tagName === "LI") {
     e.target.classList.toggle("checked");
   } else if (e.target.tagName === "SPAN") {
