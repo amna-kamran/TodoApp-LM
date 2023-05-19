@@ -111,8 +111,24 @@ span{
     background: var(--light-green);
     padding: 40px 30px 70px;
     border-radius: 10px;
+    max-height: 600px;
+        /* Set the desired max height for each to-do item */
+        overflow-y: auto;
+        /* Add a scrolling option when the content exceeds the max height */
+}
+.popup::-webkit-scrollbar {
+    width: 12px;
+    /* Width of the scroll bar */
+    background-color: var(--background-color);
+    /* Background color of the scroll bar */
 }
 
+.popup::-webkit-scrollbar-thumb {
+    background-color: var(--light-background);
+    /* Color of the scroll bar thumb */
+    border-radius: 10px;
+    /* Rounded corners of the scroll bar thumb */
+}
 .popup h2{
     color: var(--background-color);
     font-size: 20px;
@@ -180,7 +196,7 @@ ul li::before{
     background-size:cover;
     background-position: center;
     margin-top: 2px;
-    left: 40px;
+    left: 15px;
     
 }
 
@@ -190,4 +206,31 @@ ul li.checked{
 
 ul li.checked::before{
 background-image: url('assets/check.png');
+}
+
+ul li {
+    position: relative;
+    /* Add this line to make the position relative */
+    list-style: none;
+    font-size: 17px;
+    padding: 10px 8px 12px 50px;
+    user-select: none;
+    cursor: pointer;
+}
+
+ul li span {
+    /* Remove the previous span CSS rules here */
+    color: var(--background-color);
+    position: absolute;
+    right: 10px;
+    /* Adjust the value as needed */
+    top: 50%;
+    /* Adjust the value as needed */
+    transform: translateY(-50%);
+    /* Center the icon vertically */
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    line-height: 40px;
+    text-align: center;
 }
