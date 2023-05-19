@@ -234,3 +234,9 @@ ul li span {
     line-height: 40px;
     text-align: center;
 }
+
+ul li span:hover{
+background-color: var(--light-background);
+color: var(--light-green);
+border-radius: 50px;
+}
