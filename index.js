@@ -15,7 +15,14 @@ function addTask() {
     li.appendChild(span);
   }
   inputBox.value = "";
+  saveData();
 }
+// Add an event listener to the input field for keyup event
+inputBox.addEventListener("keyup", function (event) {
+  if (event.keyCode === 13) {
+    addTask();
+  }
+});
 
 //coding the function where if we click on the task, it gets toggled between being checked
 //and unchecked
@@ -29,8 +36,24 @@ function del(e) {
   //the list
   if (e.target.tagName === "LI") {
     e.target.classList.toggle("checked");
+    saveData();
   } else if (e.target.tagName === "SPAN") {
     e.target.parentElement.remove();
+    saveData();
   }
 }
 listContainer.addEventListener("click", del, false);
+
+//making a function to save data
+function saveData() {
+  localStorage.setItem("data", listContainer.innerHTML);
+}
+
+function showTasks() {
+  listContainer.innerHTML = localStorage.getItem("data");
+}
+showTasks();
+
+//code for creating a new todolist on clicking the add new list icon
+const addBox = document.querySelector(".add-box");
+popupBox = document.querySelector(".popup-box");

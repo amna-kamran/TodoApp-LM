@@ -240,3 +240,8 @@ background-color: var(--light-background);
 color: var(--light-green);
 border-radius: 50px;
 }
+/* .popup, .popup-box, .note{
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.25 ease;
+} */
