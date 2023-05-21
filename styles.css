@@ -1,244 +1,286 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
-:root{
-    --background-color:#0f150a;
-    --light-background:#1c2613;
-    --light-green: #90b76c;
-}
-
-li{
-    list-style-type: none;
-}
-body{
-    background: var(--background-color);
-}
-i{
-    color: #90b76c;
-}
-.wrapper{
-    margin: 50px;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, 265px);
-    gap: 10px;
-}
-.wrapper li{
-    height: 250px;
-    list-style: none;
-    background: var(--light-background);
-    border-radius: 5px;
-    padding: 15px 20px 20px;
+:root {
+  --background-color: #0f150a;
+  --light-background: #1c2613;
+  --light-green: #90b76c;
 }
 
-span{
-    color: var(--light-green);
+li {
+  list-style-type: none;
+}
+body {
+  background: var(--background-color);
+}
+i {
+  color: #90b76c;
+}
+.wrapper {
+  margin: 50px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 265px);
+  gap: 10px;
+}
+.wrapper li {
+  height: 250px;
+  list-style: none;
+  background: var(--light-background);
+  border-radius: 5px;
+  padding: 15px 20px 20px;
 }
 
-.add-box, .icon{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-}
-.add-box .icon{
-    height: 78px;
-    width: 78px;
-    font-size: 30px;
-    border-radius: 50%;
-    border: 2px dashed var(--light-green);
-}
-.add-box p{
-    color: var(--light-green);
-    font-weight: 500;
-    margin-top: 20px;
-}
-.bottom-content{
-    display: flex;
-    justify-content: space-between;
-    padding-top: 10px;
-    border-top:  1px solid #5c6d4b;
-}
-.note p{
-    color: white;
-    font-weight: 500;
-    text-align: center;
-}
-.note{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    cursor: pointer;
+span {
+  color: var(--light-green);
 }
 
-.bottom-content span{
-    font-size: 13px;
+.add-box,
+.icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
 }
-.bottom-content .settings i{
-    cursor: pointer;
+.add-box .icon {
+  height: 78px;
+  width: 78px;
+  font-size: 30px;
+  border-radius: 50%;
+  border: 2px dashed var(--light-green);
 }
-
-.popup-box{
-    position:fixed;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    background: rgba(0, 0, 0, 0.562);
+.add-box p {
+  color: var(--light-green);
+  font-weight: 500;
+  margin-top: 20px;
 }
-
-.popup-box .popup{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    z-index: 2;
-    max-width: 530px;
-    width: 100%;
-    transform: translate(-50%, -50%);
-
+.bottom-content {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 10px;
+  border-top: 1px solid #5c6d4b;
 }
-
-.popup{
-    display: flex;
-    flex-direction: column;
-    
-    background: var(--light-green);
-    padding: 40px 30px 70px;
-    border-radius: 10px;
-    max-height: 600px;
-        /* Set the desired max height for each to-do item */
-        overflow-y: auto;
-        /* Add a scrolling option when the content exceeds the max height */
+.note p {
+  color: white;
+  font-weight: 500;
+  text-align: center;
 }
-.popup::-webkit-scrollbar {
-    width: 12px;
-    /* Width of the scroll bar */
-    background-color: var(--background-color);
-    /* Background color of the scroll bar */
+.note {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
 }
 
-.popup::-webkit-scrollbar-thumb {
-    background-color: var(--light-background);
-    /* Color of the scroll bar thumb */
-    border-radius: 10px;
-    /* Rounded corners of the scroll bar thumb */
+.bottom-content span {
+  font-size: 13px;
 }
-.popup h2{
-    color: var(--background-color);
-    font-size: 20px;
-    margin-bottom: 20px;
+.bottom-content .settings i {
+  cursor: pointer;
 }
 
-.row{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background: var(--light-background);
-    border-radius: 30px;
-    padding-left: 20px;
-    margin-bottom: 25px;
+.popup-box {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.562);
 }
 
-.row input{
-    flex:1;
-    border: none;
-    outline: none;
-    background: transparent;
-    padding: 10px;
-    color: rgb(214, 214, 214);
+.popup-box .popup {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 2;
+  max-width: 530px;
+  width: 100%;
+  transform: translate(-50%, -50%);
 }
 
-.row button{
-    border: none;
-    outline: none;
-    padding: 16px 50px;
-    background: #5c6d4b;
-    font-size: 16px;
-    cursor: pointer;
-    border-top-right-radius: 28px;
-    border-bottom-right-radius: 28px;
-}
-button p{
-    font-size: 14px;
-    cursor: pointer;
+.popup-box,
+.popup-box .popup {
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.25s ease;
 }
 
-.todoRow{
-    display: flex;
-    justify-content: center;
-    padding-left: 50px;
-}
-.todoRow i{
-    padding: 7px 20px 0px 10px;
-    color: #1c2613;
+.popup-box.show,
+.popup-box.show .popup {
+  opacity: 1;
+  pointer-events: auto;
 }
 
-ul li{
-    list-style: none;
-    font-size: 17px;
-    padding: 10px 8px 12px 50px;
-    user-select: none;
-    cursor: pointer;
+.popup {
+  display: flex;
+  flex-direction: column;
+  background: var(--light-green);
+  padding: 5px 30px 35px;
+  border-radius: 10px;
 }
 
-ul li::before{
-    content: '';
-    position: absolute;
-    height: 22px;
-    width: 22px;
-    background-image: url('assets/square.png');
-    background-size:cover;
-    background-position: center;
-    margin-top: 2px;
-    left: 15px;
-    
+.scroll {
+  max-height: 300px;
+  /* Set the desired max height for each to-do item */
+  overflow-y: auto;
+  /* Add a scrolling option when the content exceeds the max height */
+}
+.scroll::-webkit-scrollbar {
+  width: 12px;
+  /* Width of the scroll bar */
+  background-color: var(--light-background);
+  border-radius: 10px;
+  /* Background color of the scroll bar */
 }
 
-ul li.checked{
-    text-decoration: line-through;
+.scroll::-webkit-scrollbar-thumb {
+  background-color: #5c6d4b;
+  /* Color of the scroll bar thumb */
+  border-radius: 10px;
+  /* Rounded corners of the scroll bar thumb */
+}
+.popup h2 {
+  color: var(--background-color);
+  font-size: 20px;
+  margin-bottom: 20px;
 }
 
-ul li.checked::before{
-background-image: url('assets/check.png');
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--light-background);
+  border-radius: 30px;
+  padding-left: 20px;
+  margin-bottom: 25px;
+}
+
+.row input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  padding: 10px;
+  color: rgb(214, 214, 214);
+}
+
+.row button {
+  border: none;
+  outline: none;
+  padding: 16px 50px;
+  background: #5c6d4b;
+  font-size: 16px;
+  cursor: pointer;
+  border-top-right-radius: 28px;
+  border-bottom-right-radius: 28px;
+}
+.createList {
+  text-align: center;
+  position: relative;
+}
+.createList button {
+  border: none;
+  outline: none;
+  padding: 16px 30px;
+  background: #5c6d4b;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 50px;
+  text-align: center;
+}
+button p {
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.todoRow {
+  display: flex;
+  justify-content: center;
+  padding-left: 50px;
+}
+.todoRow i {
+  padding: 7px 20px 0px 10px;
+  color: #1c2613;
 }
 
 ul li {
-    position: relative;
-    /* Add this line to make the position relative */
-    list-style: none;
-    font-size: 17px;
-    padding: 10px 8px 12px 50px;
-    user-select: none;
-    cursor: pointer;
+  list-style: none;
+  font-size: 17px;
+  padding: 10px 8px 12px 50px;
+  user-select: none;
+  cursor: pointer;
+}
+
+ul li::before {
+  content: "";
+  position: absolute;
+  height: 22px;
+  width: 22px;
+  background-image: url("assets/square.png");
+  background-size: cover;
+  background-position: center;
+  margin-top: 2px;
+  left: 15px;
+}
+
+ul li.checked {
+  text-decoration: line-through;
+}
+
+ul li.checked::before {
+  background-image: url("assets/check.png");
+}
+
+ul li {
+  position: relative;
+  /* Add this line to make the position relative */
+  list-style: none;
+  font-size: 17px;
+  padding: 10px 8px 12px 50px;
+  user-select: none;
+  cursor: pointer;
 }
 
 ul li span {
-    /* Remove the previous span CSS rules here */
-    color: var(--background-color);
-    position: absolute;
-    right: 10px;
-    /* Adjust the value as needed */
-    top: 50%;
-    /* Adjust the value as needed */
-    transform: translateY(-50%);
-    /* Center the icon vertically */
-    width: 40px;
-    height: 40px;
-    font-size: 22px;
-    line-height: 40px;
-    text-align: center;
+  /* Remove the previous span CSS rules here */
+  color: var(--background-color);
+  position: absolute;
+  right: 10px;
+  /* Adjust the value as needed */
+  top: 50%;
+  /* Adjust the value as needed */
+  transform: translateY(-50%);
+  /* Center the icon vertically */
+  width: 40px;
+  height: 40px;
+  font-size: 22px;
+  line-height: 40px;
+  text-align: center;
+}
+.popup span {
+  color: #0f150a;
+  width: 40px;
+  height: 40px;
+  font-size: 22px;
+  line-height: 40px;
+  text-align: center;
+  margin-left: 97%;
+  cursor: pointer;
 }
 
-ul li span:hover{
-background-color: var(--light-background);
-color: var(--light-green);
-border-radius: 50px;
+span:hover {
+  background-color: var(--light-background);
+  color: var(--light-green);
+  border-radius: 50px;
+}
+.createList button:hover {
+  color: var(--light-green);
+  background-color: var(--background-color);
 }
 /* .popup, .popup-box, .note{
     opacity: 0;
